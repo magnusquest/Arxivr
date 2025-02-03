@@ -1,14 +1,12 @@
-// Learn more about clients at https://docs.boundaryml.com/docs/snippets/clients/overview
-
-client<llm> GPT4oMini {
+client<llm> GPT4o {
   provider openai
   options {
-    model "gpt-4o-mini"
+    model "gpt-4o"
     api_key env.OPENAI_API_KEY
   }
 }
 
-client<llm> DeepseekClient {
+client<llm> Deepseek {
   provider ollama
   options {
     base_url "http://localhost:11434/v1"
@@ -16,7 +14,7 @@ client<llm> DeepseekClient {
   }
 }
 
-client<llm> PhiClient {
+client<llm> Phi {
   provider ollama
   options {
     base_url "http://localhost:11434/v1"
@@ -24,7 +22,7 @@ client<llm> PhiClient {
   }
 }
 
-client<llm> LlamaClient {
+client<llm> Llama {
   provider ollama
   options {
     base_url "http://localhost:11434/v1"
@@ -40,10 +38,10 @@ client<llm> ToolClient {
   }
 }
 
-client<llm> LlavaClient {
+client<llm> Qwen {
   provider ollama
   options {
     base_url "http://localhost:11434/v1"
-    model "llava:7b"
+    model "qwen2.5-coder:14b"
   }
 }
